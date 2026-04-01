@@ -14,7 +14,7 @@ resource "aws_vpc" "main" {
 resource "aws_security_group" "my_sg" {
   name        = "my-security-group"
   description = "Allow SSH"
-  vpc_id      = "aws_vpc.main.id"
+  vpc_id      = aws_vpc.main.id
 
   ingress {
     from_port   = 8080
