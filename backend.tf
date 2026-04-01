@@ -1,8 +1,8 @@
 terraform {
   backend "s3" {
-    bucket         = "my-dev-terraform-project-tdi-sep-batch"
+    bucket         = "my-dev-terraform-project"
     key            = "terraform/main.tfstate"
-    region         = "us-east-1"
+    region         = "ap-south-1"
     dynamodb_table = "my-dynamodb-table"
     encrypt        = true
   }
